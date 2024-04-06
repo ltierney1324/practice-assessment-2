@@ -13,29 +13,34 @@ duplicateCharMinCount("What about a longer string?", 3) // ["a", "t", " "]
 
 function countCharacters(string) {
 	// Your code here
-	const charCount = {};
+	let count = {};
 
 
-	for(let char of string){
-		charCount[char] = (charCount[char] ||0) + 1;
+	for(let i =0; i<string.length; i++){
+		let char=string[i];
+		if(count[char] === undefined){
+			count[char]=1;
+		}else{
+			count[char] +=1;
+		}
 	}
 
-	return charCount;
+	return count;
 
 }
 
 function duplicateCharMinCount(string, minCount) {
 	// Your code here
-	const charCount = countCharacters(string);
-	const result =[];
-
-	for(let char in charCount){
-		if(charCount[char] >=minCount){
-			result.push[char];
+	let count = countCharacters(string);
+	let arr =[];
+	// console.log(count);
+	for(let key in count){
+		// console.log(key);
+		if(count[key]>=minCount){
+			arr.push(key);
 		}
-
 	}
-	return result;
+	return arr;
 
 }
 
