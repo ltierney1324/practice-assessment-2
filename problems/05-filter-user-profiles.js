@@ -38,7 +38,17 @@ state.
 ***********************************************************************/
 
 function filterUserProfiles(users, filter) {
-  // Your code here 
+  // Your code here
+    let newArr = [];
+    for(let i=0; i<users.length; i++){
+      let el=users[i];
+      let filterResult = filter(el);
+      if(filter(el)){
+        newArr.push(el.name);
+      }
+
+    }
+    return newArr;
 }
 
 // To test the example, comment out the code below and run the following command
