@@ -20,8 +20,16 @@ console.log(clothesList); // ['tshirt', 'pants']
 ***********************************************************************/
 
 function shoppingList(list) {
-  // Your code here 
-}
+  // Your code here
+  let items = [''];
+  return function(newItem){
+    if(newItem){
+      items.push[newItem];
+    }
+    return items;
+  };
+  return items;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = shoppingList;
